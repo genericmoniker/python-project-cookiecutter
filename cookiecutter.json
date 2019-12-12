@@ -1,4 +1,9 @@
 {
-  "project_name": "Best Practices",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+  "project_name": "New Project",
+  "description": "This is my cool new project.",
+  "project_dir": "{{ cookiecutter.project_name.replace(' ', '')}}",
+  "package_dir": "{{ cookiecutter.project_dir.lower() }}",
+  "repo_name": "{{ cookiecutter.package_dir }}",
+  "version": "0.0.1",
+  "author": "Eric Smith <eric@esmithy.net>" 
 }
