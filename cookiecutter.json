@@ -1,9 +1,10 @@
 {
   "project_name": "New Project",
   "description": "This is my cool new project.",
-  "project_dir": "{{ cookiecutter.project_name.replace(' ', '')}}",
-  "package_dir": "{{ cookiecutter.project_dir.lower() }}",
-  "repo_name": "{{ cookiecutter.package_dir }}",
+  "distribution_name": "{{ cookiecutter.project_name.replace(' ', '-') }}",
+  "repo_name": "{{ cookiecutter.distribution_name.lower()}}",
+  "package_name": "{{ cookiecutter.repo_name.replace('-', '') }}",
   "version": "0.0.1",
-  "author": "Eric Smith <eric@esmithy.net>" 
+  "full_name": "Eric Smith",
+  "email": "eric@esmithy.net"
 }

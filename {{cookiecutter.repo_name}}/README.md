@@ -1,14 +1,19 @@
 # {{cookiecutter.project_name}}
 
-## Setup
+## Development setup
 ```sh
+# If poetry isn't installed
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+pipx install poetry
+
 # Install dependencies
-pipenv install --dev
+poetry install
 
 # Setup pre-commit and pre-push hooks
-pipenv run pre-commit install -t pre-commit
-pipenv run pre-commit install -t pre-push
-```
+poetry run pre-commit install -t pre-commit
+poetry run pre-commit install -t pre-push
 
-## Credits
-This package was created with Cookiecutter and the [sourceryai/python-best-practices-cookiecutter](https://github.com/sourceryai/python-best-practices-cookiecutter) project template.
+# To run pre-commit hooks manually (without a commit)
+poetry run pre-commit run --all-files
+```

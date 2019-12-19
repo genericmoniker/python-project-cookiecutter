@@ -18,19 +18,28 @@ python3 -m pipx ensurepath
 # Install poetry using pipx
 pipx install poetry
 
-# Use cookiecutter to create project from this template
+# Use cookiecutter to create project from this template, following prompts
+# for project-specific settings
 pipx run cookiecutter gh:genericmoniker/python-project-cookiecutter
 
 # Enter project directory
 cd <repo_name>
 
-# Initialise git repo
+# Initialize git repo
 git init
+git add --all
 
-# Install dependencies
-poetry install
-
-# Setup pre-commit and pre-push hooks
-poetry run pre-commit install -t pre-commit
-poetry run pre-commit install -t pre-push
+# Follow "Development setup" steps in the newly created README.md
 ```
+
+## Justifications
+
+* package_name - Why "newproject" instead of "new-project" (same as the repo
+  name)? [PEP
+  8](https://www.python.org/dev/peps/pep-0008/#package-and-module-names)
+* pylint - Why not flake8? I've found that in combination with black, flake8
+  doesn't offer much. 
+
+## Credits
+
+Inspired by [sourceryai/python-best-practices-cookiecutter](https://github.com/search?q=sourceryai%2Fpython-best-practices-cookiecutter).

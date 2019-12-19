@@ -6,29 +6,28 @@ repos:
     name: isort
     stages: [commit]
     language: system
-    entry: pipenv run isort
+    entry: poetry run isort
     types: [python]
 
   - id: black
     name: black
     stages: [commit]
     language: system
-    entry: pipenv run black
+    entry: poetry run black
     types: [python]
 
-  - id: flake8
-    name: flake8
+  - id: pylint
+    name: pylint
     stages: [commit]
     language: system
-    entry: pipenv run flake8
+    entry: poetry run pylint
     types: [python]
-    exclude: setup.py
 
   - id: mypy
     name: mypy
     stages: [commit]
     language: system
-    entry: pipenv run mypy
+    entry: poetry run mypy
     types: [python]
     pass_filenames: false
 
@@ -36,13 +35,7 @@ repos:
     name: pytest
     stages: [commit]
     language: system
-    entry: pipenv run pytest
-    types: [python]
-
-  - id: pytest-cov
-    name: pytest
-    stages: [push]
-    language: system
-    entry: pipenv run pytest --cov --cov-fail-under=100
+    entry: poetry run pytest
     types: [python]
     pass_filenames: false
+
