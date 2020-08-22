@@ -6,7 +6,7 @@
 - Formatting with [black](https://github.com/psf/black)
 - Import sorting with [isort](https://github.com/timothycrosley/isort)
 - Static typing with [mypy](http://mypy-lang.org/)
-- Linting with [flake8](http://flake8.pycqa.org/en/latest/)
+- Linting with [pylint](https://www.pylint.org/)
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
 
 ## How to use
