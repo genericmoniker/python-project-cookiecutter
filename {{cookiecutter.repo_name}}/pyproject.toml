@@ -36,6 +36,10 @@ exclude = '''
 )
 '''
 
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
 [tool.mypy]
 # Coming soon?
 # https://github.com/python/mypy/issues/5205
